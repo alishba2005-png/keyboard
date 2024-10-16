@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Keyboard</title>
+    <style type="text/css" media="all">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #379390;
+        }
+        #mid {
+            position: relative;
+            left: 15px;
+        }
+        #btn {
+            position: relative;
+            left: 36px;
+        }
+        input[type="button"] {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            animation: key 2s infinite;
+        }
+        @keyframes key {
+            0%{box-shadow: 0px 0px 7px red;}
+            25%{box-shadow: 0px 0px 7px green;}
+            50%{box-shadow: 0px 0px 7px blue;}
+            75%{box-shadow: 0px 0px 7px yellow;}
+            100%{box-shadow: 0px 0px 7px orange;}
+        }
+        input[type="button"]:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <form name="keyboard">
+        <input type="text" name="screen" size="45" style="height: 30px; font-size: 15px; background-color: black; color: white;">
+        <br>
+        <input type="button" value="q" onclick="keyborad.screen.value += 'q'">
+        <input type="button" value="w" onclick="keyborad.screen.value += 'w'">
+        <input type="button" value="e" onclick="keyborad.screen.value += 'e'">
+        <input type="button" value="r" onclick="keyborad.screen.value += 'r'">
+        <input type="button" value="t" onclick="keyborad.screen.value += 't'">
+        <input type="button" value="y" onclick="keyborad.screen.value += 'y'">
+        <input type="button" value="u" onclick="keyborad.screen.value += 'u'">
+        <input type="button" value="i" onclick="keyborad.screen.value += 'i'">
+        <input type="button" value="o" onclick="keyborad.screen.value += 'o'">
+        <input type="button" value="p" onclick="keyborad.screen.value += 'p'">
+        <br> 
+        <input type="button" value="a" id="mid" onclick="keyborad.screen.value += 'a'">
+        <input type="button" value="s" id="mid" onclick="keyborad.screen.value += 's'">
+        <input type="button" value="d" id="mid" onclick="keyborad.screen.value += 'd'">
+        <input type="button" value="f" id="mid" onclick="keyborad.screen.value += 'f'">
+        <input type="button" value="g" id="mid" onclick="keyborad.screen.value += 'g'">
+        <input type="button" value="h" id="mid" onclick="keyborad.screen.value += 'h'">
+        <input type="button" value="j" id="mid" onclick="keyborad.screen.value += 'j'">
+        <input type="button" value="k" id="mid" onclick="keyborad.screen.value += 'k'">
+        <input type="button" value="l" id="mid" onclick="keyborad.screen.value += 'l'">
+        <br>
+        <input type="button" value="z" id="btn" onclick="keyborad.screen.value += 'z'">
+        <input type="button" value="x" id="btn" onclick="keyborad.screen.value += 'x'">
+        <input type="button" value="c" id="btn" onclick="keyborad.screen.value += 'c'">
+        <input type="button" value="v" id="btn" onclick="keyborad.screen.value += 'v'">
+        <input type="button" value="b" id="btn" onclick="keyborad.screen.value += 'b'">
+        <input type="button" value="n" id="btn" onclick="keyborad.screen.value += 'n'">
+        <input type="button" value="m" id="btn" onclick="keyborad.screen.value += 'm'">
+        <input type="button" value="x" id="btn" onclick="keyborad.screen.value = keyboard.screen.value.slice(0,-1)">
+    </form>
+</body>
+</html>
